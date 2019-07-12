@@ -1,3 +1,3 @@
 
 ## Search movie App
-#### JavaScript API Request
+#### OMDb API JavaScript Request
