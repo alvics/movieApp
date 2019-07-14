@@ -9,7 +9,7 @@ $(document).ready(() => {
 
 function getMovies(searchText) {
   axios
-    .get('http://www.omdbapi.com/?&apikey=db5f16ed&s=' + searchText)
+    .get('https://www.omdbapi.com/?&apikey=db5f16ed&s=' + searchText)
     .then(function(response) {
       // handle success
       // console.log(response);
