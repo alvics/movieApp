@@ -11,7 +11,7 @@ function getMovies(searchText) {
   let loader = `<div class="spinner-border" style="margin: 0 auto"></div>`;
   document.getElementById('movies').innerHTML = loader;
   axios
-    .get('http://www.omdbapi.com/?&apikey=db5f16ed&s=' + searchText)
+    .get('https://www.omdbapi.com/?&apikey=db5f16ed&s=' + searchText)
     .then(function(response) {
       // handle success
       // console.log(response);
@@ -55,7 +55,7 @@ function getMovie() {
   let movieId = sessionStorage.getItem('movieId');
 
   axios
-    .get('http://www.omdbapi.com/?&apikey=db5f16ed&i=' + movieId)
+    .get('https://www.omdbapi.com/?&apikey=db5f16ed&i=' + movieId)
     .then(function(response) {
       // handle success
       console.log(response);
@@ -99,9 +99,13 @@ function getMovie() {
         <h2>Plot</h2>
         <p>${movie.Plot}</p>
         <hr>
+<<<<<<< HEAD
         <a href="http://imdb.com/title/${
           movie.imdbID
         }" teaget="blank" class="btn btn-secondary">View IMDB</a>
+=======
+        <a href="https://imdb.com/title/${movie.imdbID}" target="blank" class="btn btn-secondary">View IMDB</a>
+>>>>>>> 634c57cd83213a865fb78528fa9576d1095bb896
         <a href="index.html" class="btn btn-primary">Back to Search</a>
         </div>
         </div>

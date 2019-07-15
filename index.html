@@ -8,8 +8,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet"> 
     <title>My Movies</title>
   </head>
@@ -24,28 +23,26 @@
       <h1 class="pt-5 text-center text-white">OMDb API</h1>
       <div class="search-box text-center">
         <h3 class="text-secondary">Search by Movie Title</h3>
-        <img src="http://omdbapi.com/src/poster.jpg" alt="movie poster" class="pb-3 mt-3"/>
+        <img src="https://omdbapi.com/src/poster.jpg" alt="movie poster" class="pb-3 mt-3"/>
         <div class="pb-4 mt-3">
         <form id="searchForm">
           <input id="searchText" style="height: 50px; width:300px" type="text" placeholder=" Search movies..." />
           </form>
         </div>
       </div>
-      <h4 class="text-center pb-4">What's your favorite movie?</h4>
+         <h4 class="text-center pb-4">What's your favorite movie?</h4>
     </div>
 
-    <div class="container bg-dark">
+    <div class="container bg-dark rounded" style="margin-top:-20px;">
       <div id="movies" class="row"></div>
 
       <div class="container">
         <div id="movie" class="well"></div>
     </div>
   </body>
-  <script
-			  src="https://code.jquery.com/jquery-3.4.1.min.js"
-			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="api.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script src="api.js"></script>
   
 </html>
