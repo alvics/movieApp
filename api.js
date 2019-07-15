@@ -8,7 +8,7 @@ $(document).ready(() => {
 });
 
 function getMovies(searchText) {
-  let loader = `<div class="spinner-border" style="margin: 0 autogit"></div>`;
+  let loader = `<div class="spinner-border" style="margin: 0 auto"></div>`;
   document.getElementById('movies').innerHTML = loader;
   axios
     .get('http://www.omdbapi.com/?&apikey=db5f16ed&s=' + searchText)
