@@ -64,7 +64,7 @@ function getMovie() {
            </div>
           <div class="col-md-8 mb-5">
              <h2 class="text-white mt-4" style="opacity:0.8">${movie.Title}</h2>
-             <ul class="list-group mt-5">
+             <ul class="list-group mt-4">
                 <li class="list-group-item"><strong>Genre:</strong> ${movie.Genre}</li>
                 <li class="list-group-item"><strong>Released:</strong> ${movie.Released}</li>
                 <li class="list-group-item"><strong>Rated:</strong> ${movie.Rated}</li>
@@ -77,7 +77,7 @@ function getMovie() {
         </div>
 
         <div class="row">
-        <div class="bg-dark text-white p-5 w-100 rounded" style="margin-top:-15px">
+        <div class="bg-dark text-white p-5 w-100 rounded" style="margin-top:-10px">
         <h2>Plot</h2>
         <p>${movie.Plot}</p>
         <hr>
