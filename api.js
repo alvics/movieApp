@@ -8,6 +8,8 @@ $(document).ready(() => {
 });
 
 function getMovies(searchText) {
+  let loader = `<div class="spinner-border" style="margin: 0 autogit"></div>`;
+  document.getElementById('movies').innerHTML = loader;
   axios
     .get('http://www.omdbapi.com/?&apikey=db5f16ed&s=' + searchText)
     .then(function(response) {
@@ -19,15 +21,19 @@ function getMovies(searchText) {
         output += `
               <div class="col-md-3">
                <div class="text-center">
-                <img src='${movie.Poster}' style="height:240px;" class="img-fluid mt-4">
+                <img src='${
+                  movie.Poster
+                }' style="height:240px;" class="img-fluid mt-4">
                  <h5 class="text-white">${movie.Title}</h5>
-                 <a onClick="movieSelected('${ movie.imdbID }')" class="btn btn-primary" href="movie.html">Movie Details</a>
+                 <a onClick="movieSelected('${
+                   movie.imdbID
+                 }')" class="btn btn-primary" href="movie.html">Movie Details</a>
                </div>
               </div>
               `;
-       // console.log(movie.Title);
+        // console.log(movie.Title);
       });
-      $('#movies').html(output);
+      $('#movies').html(output) = result;
     })
     .catch(function(error) {
       // handle error
@@ -63,13 +69,27 @@ function getMovie() {
           <div class="col-md-8 mb-5">
              <h2>${movie.title}</h2>
              <ul class="list-group mt-3">
-                <li class="list-group-item"><strong>Genre:</strong> ${movie.Genre}</li>
-                <li class="list-group-item"><strong>Released:</strong> ${movie.Released}</li>
-                <li class="list-group-item"><strong>Rated:</strong> ${movie.Rated}</li>
-                <li class="list-group-item"><strong>IMBD Rating:</strong> ${movie.imbdRating}</li>
-                <li class="list-group-item"><strong>Director:</strong> ${movie.Director}</li>
-                <li class="list-group-item"><strong>Writer:</strong> ${movie.Writer}</li>
-                <li class="list-group-item"><strong>Actors:</strong> ${movie.Actors}</li>
+                <li class="list-group-item"><strong>Genre:</strong> ${
+                  movie.Genre
+                }</li>
+                <li class="list-group-item"><strong>Released:</strong> ${
+                  movie.Released
+                }</li>
+                <li class="list-group-item"><strong>Rated:</strong> ${
+                  movie.Rated
+                }</li>
+                <li class="list-group-item"><strong>IMBD Rating:</strong> ${
+                  movie.imbdRating
+                }</li>
+                <li class="list-group-item"><strong>Director:</strong> ${
+                  movie.Director
+                }</li>
+                <li class="list-group-item"><strong>Writer:</strong> ${
+                  movie.Writer
+                }</li>
+                <li class="list-group-item"><strong>Actors:</strong> ${
+                  movie.Actors
+                }</li>
              </ul>
           </div>
         </div>
@@ -79,7 +99,9 @@ function getMovie() {
         <h2>Plot</h2>
         <p>${movie.Plot}</p>
         <hr>
-        <a href="http://imdb.com/title/${movie.imdbID}" teaget="blank" class="btn btn-secondary">View IMDB</a>
+        <a href="http://imdb.com/title/${
+          movie.imdbID
+        }" teaget="blank" class="btn btn-secondary">View IMDB</a>
         <a href="index.html" class="btn btn-primary">Back to Search</a>
         </div>
         </div>
