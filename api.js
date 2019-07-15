@@ -49,7 +49,7 @@ function getMovie() {
   let movieId = sessionStorage.getItem('movieId');
 
   axios
-    .get('http://www.omdbapi.com/?&apikey=db5f16ed&i=' + movieId)
+    .get('https://www.omdbapi.com/?&apikey=db5f16ed&i=' + movieId)
     .then(function(response) {
       // handle success
       console.log(response);
@@ -79,7 +79,7 @@ function getMovie() {
         <h2>Plot</h2>
         <p>${movie.Plot}</p>
         <hr>
-        <a href="http://imdb.com/title/${movie.imdbID}" teaget="blank" class="btn btn-secondary">View IMDB</a>
+        <a href="https://imdb.com/title/${movie.imdbID}" teaget="blank" class="btn btn-secondary">View IMDB</a>
         <a href="index.html" class="btn btn-primary">Back to Search</a>
         </div>
         </div>
